@@ -1,33 +1,38 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
-import {Layout, Header, Navigation, Drawer, Content} from 'react-mdl'
+import { Layout, Header, Navigation, Drawer, Content } from 'react-mdl';
+import Main from './components/main';
+import { Link } from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="demo-big-content">
-    <Layout>
-        <Header title="Title" scroll>
-            <Navigation>
-                <a href="/">Link</a>
-                <a href="/">Link</a>
-                <a href="/">Link</a>
-                <a href="/">Link</a>
-            </Navigation>
-        </Header>
-        <Drawer title="Title">
-            <Navigation>
-                <a href="/">Link</a>
-                <a href="/">Link</a>
-                <a href="/">Link</a>
-                <a href="/">Link</a>
-            </Navigation>
-        </Drawer>
-        <Content>
-            <div className="page-content" />
-        </Content>
-    </Layout>
-  </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div className="demo-big-content">
+      <Layout>
+          <Header title="Title" scroll>
+              <Navigation>
+                  <Link to="/aboutme">About Me</Link>
+                  <Link to="/resume">Resume</Link>
+                  <Link to="/contact">Contact</Link>
+                  <Link to="/projects">Projects</Link>
+              </Navigation>
+          </Header>
+          <Drawer title="Title">
+              <Navigation>
+                  <Link to="/aboutme">About Me</Link>
+                  <Link to="/resume">Resume</Link>
+                  <Link to="/contact">Contact</Link>
+                  <Link to="/projects">Projects</Link>
+              </Navigation>
+          </Drawer>
+          <Content>
+              <div className="page-content" />
+              <Main/>
+          </Content>
+      </Layout>
+    </div>
+    );
+  } 
 }
 
 export default App;
