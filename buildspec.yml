@@ -29,7 +29,7 @@ phases:
       - echo Building...
       - yarn build
 artifacts:
-  files:
-    - "**/*"
-  discard-paths: no
-  base-directory: 'build'
+    files:
+        - './**/*'
+      base-directory: public
+      name: myportfolio
