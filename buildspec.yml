@@ -5,6 +5,8 @@ phases:
     commands:
       - echo Navigating folder
       - cd myportfolio
+      - echo Installing brew
+      - brew install wget
       - echo Installing watchman
       - brew install watchman
       - echo Installing Node 12...
