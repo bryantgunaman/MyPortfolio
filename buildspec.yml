@@ -3,6 +3,8 @@ version: 0.2
 phases:
   install:
     commands:
+      - echo Navigating folder
+      - cd myportfolio
       - echo Installing Node 12...
       - curl -sL https://deb.nodesource.com/setup_12.x | bash -
       - apt install -y nodejs
@@ -18,8 +20,6 @@ phases:
       - yarn
   build:
     commands:
-      - echo Navigating folder
-      - cd myportfolio
       - echo testing
       - yarn test
       - echo Building...
