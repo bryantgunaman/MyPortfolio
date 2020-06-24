@@ -25,12 +25,11 @@ phases:
       - yarn
   build:
     commands:
-      - echo testing
-      - yarn test --exit 
+       
       - echo Building...
       - yarn build
 artifacts:
   files:
     - "**/*"
   discard-paths: no
-  base-directory: /myportfolio/dist
+  base-directory: ~/myportfolio/dist
