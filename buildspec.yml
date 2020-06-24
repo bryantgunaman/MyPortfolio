@@ -29,6 +29,5 @@ phases:
       - yarn build
 artifacts:
     files:
-        - './**/*'
-    base-directory: public
-    name: myportfolio
+      - 'myportolio/public/*'
+    discard-paths: yes
