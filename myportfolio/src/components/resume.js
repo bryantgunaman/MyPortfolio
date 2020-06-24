@@ -31,7 +31,7 @@ class Resume extends Component {
                                     <Cell col={4}>
                                         <Button variant="contained" color="primary" style={{height:'75px', width:'150px'}}>
                                             <Link 
-                                                // target="_blank"
+                                                target="_blank"
                                                 style={{textDecoration: 'none', color: 'white'}} 
                                                 to="/cs-resume">Computer Science Resume   
                                             </Link>
@@ -40,7 +40,7 @@ class Resume extends Component {
                                     <Cell col={4}>
                                         <Button variant="contained" color="secondary" style={{height:'75px', width:'150px'}}>
                                         <Link 
-                                            // target="_blank"
+                                            target="_blank"
                                             style={{textDecoration: 'none', color: 'white'}} 
                                             to="/business-resume">Business Resume 
                                         </Link>
@@ -53,7 +53,9 @@ class Resume extends Component {
                             <h4 style={{color: 'grey'}}>Full Stack Software Developer</h4>
                             <hr style={{borderTop: '3px solid #833fb2', width: '65%'}}/>
                             <p>
-                                BLABLABLABLABLA
+                                An optimistic personality with an enduring work ethic. 
+                                Always seeking to make significant impacts and contributions. 
+                                A listening and understanding leader. 
                             </p>
                             <hr style={{borderTop: '3px solid #833fb2', width: '65%'}}/>
                             <h5>Phone</h5>
@@ -67,18 +69,19 @@ class Resume extends Component {
                             <hr style={{borderTop: '3px solid #833fb2', width: '65%'}}/>
                         </Cell>
                         <Cell className="resume-right-col" col={8}>
+                            <h2> UNDER CONSTRUCTION. DOWNLOAD MY RESUMES ON THE LEFT </h2>
                             <h2>Education</h2>
                             <Education
                                 startYear={2016}
                                 endYear={2020}
-                                schoolName={"University of California, Irvine"}
-                                schoolDescription={"BLABLABLA"}
+                                schoolName={"Computer Science"}
+                                schoolDescription={"University of California, Irvine"}
                             />
                             <Education
                                 startYear={2016}
                                 endYear={2020}
-                                schoolName={"University of California, Irvine"}
-                                schoolDescription={"BLABLABLA"}
+                                schoolName={"Business Information Management"}
+                                schoolDescription={"University of California, Irvine"}
                             />
                             <hr style={{borderTop: '3px solid #e22947'}}/>
 
