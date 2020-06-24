@@ -12,13 +12,15 @@ phases:
       - apt install --no-install-recommends yarn
   pre_build:
     commands:
+      - echo Installing npm ...
+      - npm install
       - echo Installing dependencies...
       - yarn
   build:
     commands:
       - echo Navigating folder
       - cd myportfolio
-      - echo Testing...
+      - echo testing
       - yarn test
       - echo Building...
       - yarn build
