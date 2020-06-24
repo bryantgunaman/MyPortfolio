@@ -14,9 +14,9 @@ class Resume extends Component {
                 <div>
                     <Grid>
                         <Cell col={4}>
-                            <div style={{textAlign: 'center', paddingRight:"10em"}}>
+                            <div style={{textAlign: 'center', paddingRight:"12em", paddingTop: '20px'}}>
                                 <img
-                                    src="https://66.media.tumblr.com/c94db31e99da5a8bba0a4087d6f137f6/tumblr_plck75zRtX1tnbbg0_640.jpg"
+                                    src="https://media-exp1.licdn.com/dms/image/C5603AQEP7T5fgnMPwg/profile-displayphoto-shrink_400_400/0?e=1598486400&v=beta&t=Wgu_86kpZWr5cL4c7bNbkPabYOh5JoEhzrSW9UDS82o"
                                     alt="avatar"
                                     style={{height: '200px', borderRadius: '50%'}}
                                     />
