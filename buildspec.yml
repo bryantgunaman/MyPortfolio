@@ -13,9 +13,11 @@ phases:
   pre_build:
     commands:
       - echo Installing dependencies...
-      - yarn install
+      - yarn
   build:
     commands:
+      - echo Navigating folder
+      - cd myportfolio
       - echo Testing...
       - yarn test
       - echo Building...
