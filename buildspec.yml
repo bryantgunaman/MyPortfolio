@@ -25,11 +25,10 @@ phases:
       - yarn
   build:
     commands:
-       
       - echo Building...
       - yarn build
 artifacts:
     files:
         - './**/*'
-      base-directory: public
-      name: myportfolio
+    base-directory: public
+    name: myportfolio
