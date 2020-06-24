@@ -31,7 +31,7 @@ class Resume extends Component {
                                     <Cell col={4}>
                                         <Button variant="contained" color="primary" style={{height:'75px', width:'150px'}}>
                                             <Link 
-                                                target="_blank"
+                                                // target="_blank"
                                                 style={{textDecoration: 'none', color: 'white'}} 
                                                 to="/cs-resume">Computer Science Resume   
                                             </Link>
@@ -40,7 +40,7 @@ class Resume extends Component {
                                     <Cell col={4}>
                                         <Button variant="contained" color="secondary" style={{height:'75px', width:'150px'}}>
                                         <Link 
-                                            target="_blank"
+                                            // target="_blank"
                                             style={{textDecoration: 'none', color: 'white'}} 
                                             to="/business-resume">Business Resume 
                                         </Link>
