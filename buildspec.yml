@@ -12,10 +12,13 @@ phases:
       - curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
       - echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
       - apt install --no-install-recommends yarn
-  pre_build:
-    commands:
       - echo Installing npm ...
       - npm install
+      - npm install --save react-mdl 
+      - npm install pdfjs-dist@2.4.456
+      - npm install @phuocng/react-pdf-viewer
+  pre_build:
+    commands:
       - echo Installing dependencies...
       - yarn
   build:
