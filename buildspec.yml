@@ -15,6 +15,7 @@ phases:
       - echo Installing npm ...
       - npm install
       - npm install --save react-mdl 
+      - npm install react-router-dom
       - npm install pdfjs-dist@2.4.456
       - npm install @phuocng/react-pdf-viewer
   pre_build:
