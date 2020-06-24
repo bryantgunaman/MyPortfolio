@@ -6,9 +6,6 @@ phases:
       - echo Navigating folder
       - cd myportfolio
       - echo Installing brew
-      - brew install wget
-      - echo Installing watchman
-      - brew install watchman
       - echo Installing Node 12...
       - curl -sL https://deb.nodesource.com/setup_12.x | bash -
       - apt install -y nodejs
@@ -29,7 +26,7 @@ phases:
   build:
     commands:
       - echo testing
-      - yarn test 
+      - yarn test --exit 
       - echo Building...
       - yarn build
 artifacts:
