@@ -32,4 +32,4 @@ artifacts:
   files:
     - "**/*"
   discard-paths: no
-  base-directory: ~/myportfolio/dist
+  base-directory: ~/MyPortfolio/myportfolio/dist
