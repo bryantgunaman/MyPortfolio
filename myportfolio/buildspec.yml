@@ -1,5 +1,4 @@
 version: 0.2
-
 phases: 
     install:
         commands:
@@ -16,7 +15,6 @@ phases:
         # install dependencies
         - echo Installing Dependencies...
         - yarn 
-    
     build:
         commands:
         # test
