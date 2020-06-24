@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 import {Grid, Cell} from 'react-mdl'
 
 class Landing extends Component {
+
+    componentWillMount() {
+        document.title = "Home"
+    }
+
     render () {
         return (
             <div style={{width: '100%', margin: 'auto'}}>
@@ -33,7 +38,7 @@ class Landing extends Component {
                                 </a>
 
                                 {/* Facebook */}
-                                <a href="https://www.facebook.com/bryant.gunaman" rel="noopener noreferrer" target="_blank">
+                                <a href="https://www.facebook.com/public/Bryant-Gunaman" rel="noopener noreferrer" target="_blank">
                                     <i className="fa fa-facebook-square" aria-hidden="true" />
                                 </a>
                                 

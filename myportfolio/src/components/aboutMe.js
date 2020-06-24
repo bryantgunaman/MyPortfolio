@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
 
 class AboutMe extends Component {
+
+    componentWillMount() {
+        document.title = "About Me"
+    }
+
     render () {
         return (
             <div>
-                <h1>About Me Page (IN PROGRESS)</h1>
+                <h1>About Me Page (UNDER CONSTRUCTION)</h1>
             </div>
         )
     }

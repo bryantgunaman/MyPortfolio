@@ -9,6 +9,10 @@ class Projects extends Component {
         };
     }
 
+    componentWillMount() {
+        document.title = "Projects"
+    }
+
     toggleCategories() {
         if (this.state.activeTab === 0) {
             return (
