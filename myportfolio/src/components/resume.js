@@ -1,5 +1,8 @@
+
 import React, { Component } from 'react';
 import { Grid, Cell,} from 'react-mdl';
+import { Link } from 'react-router-dom';
+import Button from '@material-ui/core/Button';
 import Education from './education';
 import Experience from './experience';
 import Skills from './skills';
@@ -11,14 +14,37 @@ class Resume extends Component {
                 <div>
                     <Grid>
                         <Cell col={4}>
-                            <div style={{textAligh: 'center'}}>
+                            <div style={{textAlign: 'center', paddingRight:"10em"}}>
                                 <img
                                     src="https://66.media.tumblr.com/c94db31e99da5a8bba0a4087d6f137f6/tumblr_plck75zRtX1tnbbg0_640.jpg"
                                     alt="avatar"
-                                    style={{height: '200px'}}
-                                />
+                                    style={{height: '200px', borderRadius: '50%'}}
+                                    />
                             </div>
-                            <h2 style={{paddingTop: '2em'}}> Bryant Gunaman</h2>
+                            <div style={{paddingTop: '2em'}}>
+                                <Grid>
+                                    <Cell col={4}>
+                                        <Button variant="contained" color="primary" style={{height:'75px', width:'150px'}}>
+                                            <Link 
+                                                target="_blank"
+                                                style={{textDecoration: 'none', color: 'white'}} 
+                                                to="/cs-resume">Computer Science Resume   
+                                            </Link>
+                                        </Button>
+                                    </Cell>
+                                    <Cell col={4}>
+                                        <Button variant="contained" color="secondary" style={{height:'75px', width:'150px'}}>
+                                        <Link 
+                                            target="_blank"
+                                            style={{textDecoration: 'none', color: 'white'}} 
+                                            to="/business-resume">Business Resume 
+                                        </Link>
+                                        </Button>
+                                    </Cell>
+                                </Grid>
+                            </div>
+                            
+                            <h2 > Bryant Gunaman</h2>
                             <h4 style={{color: 'grey'}}>Full Stack Software Developer</h4>
                             <hr style={{borderTop: '3px solid #833fb2', width: '65%'}}/>
                             <p>
