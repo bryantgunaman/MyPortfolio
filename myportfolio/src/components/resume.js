@@ -1,7 +1,5 @@
-
 import React, { Component } from 'react';
 import { Grid, Cell,} from 'react-mdl';
-import { Link } from 'react-router-dom';
 import Button from '@material-ui/core/Button';
 import Education from './education';
 import Experience from './experience';
@@ -13,61 +11,143 @@ class Resume extends Component {
         document.title = "Resume"
     }
 
+    // URL to my profile picture
+    profilePicURL = "https://media-exp1.licdn.com/dms/image/C5603AQEP7T5fgnMPwg/profile-displayphoto-shrink_400_400/0?e=1598486400&v=beta&t=Wgu_86kpZWr5cL4c7bNbkPabYOh5JoEhzrSW9UDS82o"
+
+    // Profile Picture component
+    profilePicture = () => {
+        return (
+        <img
+        src = {this.profilePicURL}
+        alt="avatar"
+        style={{height: '200px', borderRadius: '50%', marginLeft: '50px', marginBottom: '2em'}}
+        /> )
+    }
+
+    // Handles opening a URL in a new tab
+    handleOpenUrlNewTab = (url) => {
+        var win = window.open(url, '_blank');
+        win.focus();
+    }
+
+    // Computer Science Resume Button Component
+    csButton = () => {
+        return (<Button 
+                variant="contained" color="primary" 
+                style={{height:'75px', width:'150px', marginRight:'5px'}}
+                onClick={() => this.handleOpenUrlNewTab("/cs-resume")}>
+                Computer Science Resume
+                </Button> )
+    }
+
+    // Business Button Component 
+    businessButton = () => {
+        return (<Button 
+                variant="contained" color="secondary" 
+                style={{height:'75px', width:'150px'}}
+                onClick={() => this.handleOpenUrlNewTab("/business-resume")}>
+                Business Resume
+                </Button>)
+    }
+
+    // Component consiting of the CS and Business Resume buttons
+    resumeButtons = () => {
+        return (<div>
+                <this.csButton/><this.businessButton/>
+                </div>
+        )
+    }
+
+    // Name and Role Component
+    nameLabel = () => {
+        return (<div>
+                <h2>Bryant Gunaman</h2>
+                <h4 style={{color: 'grey'}}>Full Stack Software Developer</h4>
+                </div>)
+    }
+
+    // A purple line to separate components
+    purpleLine = () => {
+        return (<hr style={{borderTop: '3px solid #833fb2', width: '95%'}}/>)
+    }
+
+    // Paragraph component describing myself
+    personalDescription = () => {
+        return (<p>
+                An optimistic personality with an enduring work ethic. 
+                Always seeking to make significant impacts and contributions. 
+                A listening and understanding leader. 
+                </p>)
+    }
+
+    // Component consiting of my phone number
+    phoneLabel = () => {
+        return (<div>
+                <h5>Phone</h5>
+                <p>(628) 999-3783</p>
+                </div>)
+    }
+
+    // Component consiting of my email
+    emailLabel = () => {
+        return (<div>
+                <h5>Email</h5>
+                <p>bryantgunaman@gmail.com</p>
+                </div>)
+    }
+
+    // Component consiting of my github profile
+    githubLabel = () => {
+        return (<div>
+                <h5>Github</h5>
+                <p>github.com/bryantgunaman</p>
+                </div>)
+    }
+
+    // Component consiting of my linked in profile
+    linkedInLabel = () => {
+        return (<div>
+                <h5>LinkedIn</h5>
+                <p>linkedin.com/in/bryantgunaman</p>
+                </div>)
+    }
+
+    // My personal detail components combined
+    personalDetails = () => {
+        return (<div>
+                <this.nameLabel/> 
+                <this.purpleLine/>
+                <this.personalDescription/>
+                <this.purpleLine/>
+                <this.phoneLabel/>
+                <this.emailLabel/>
+                <this.githubLabel/>
+                <this.linkedInLabel/>
+                <this.purpleLine/>
+                </div>)
+    }
+
+    // A combination of all left side components
+    leftSideComponents = () => {
+        return (
+            <div>
+            <this.profilePicture/>
+            <this.resumeButtons/>
+            <this.personalDetails/>
+            </div>
+        )
+    }
+
     render () {
         return (
             <div>
                 <div>
                     <Grid>
+                        {/* Left side */}
                         <Cell col={4}>
-                            <div style={{textAlign: 'center', paddingRight:"12em", paddingTop: '20px'}}>
-                                <img
-                                    src="https://media-exp1.licdn.com/dms/image/C5603AQEP7T5fgnMPwg/profile-displayphoto-shrink_400_400/0?e=1598486400&v=beta&t=Wgu_86kpZWr5cL4c7bNbkPabYOh5JoEhzrSW9UDS82o"
-                                    alt="avatar"
-                                    style={{height: '200px', borderRadius: '50%'}}
-                                    />
-                            </div>
-                            <div style={{paddingTop: '2em'}}>
-                                <Grid>
-                                    <Cell col={4}>
-                                        <Button variant="contained" color="primary" style={{height:'75px', width:'150px'}}>
-                                            <Link 
-                                                // target="_blank"
-                                                style={{textDecoration: 'none', color: 'white'}} 
-                                                to="/cs-resume">Computer Science Resume   
-                                            </Link>
-                                        </Button>
-                                    </Cell>
-                                    <Cell col={4}>
-                                        <Button variant="contained" color="secondary" style={{height:'75px', width:'150px'}}>
-                                        <Link 
-                                            // target="_blank"
-                                            style={{textDecoration: 'none', color: 'white'}} 
-                                            to="/business-resume">Business Resume 
-                                        </Link>
-                                        </Button>
-                                    </Cell>
-                                </Grid>
-                            </div>
-                            
-                            <h2 > Bryant Gunaman</h2>
-                            <h4 style={{color: 'grey'}}>Full Stack Software Developer</h4>
-                            <hr style={{borderTop: '3px solid #833fb2', width: '65%'}}/>
-                            <p>
-                                An optimistic personality with an enduring work ethic. 
-                                Always seeking to make significant impacts and contributions. 
-                                A listening and understanding leader. 
-                            </p>
-                            <hr style={{borderTop: '3px solid #833fb2', width: '65%'}}/>
-                            <h5>Phone</h5>
-                            <p>(628) 999-3783</p>
-                            <h5>Email</h5>
-                            <p>bryantgunaman@gmail.com</p>
-                            <h5>LinkedIn</h5>
-                            <p>linkedin.com/in/bryantgunaman</p>
-                            <h5>Github</h5>
-                            <p>/bryantgunaman</p>
-                            <hr style={{borderTop: '3px solid #833fb2', width: '65%'}}/>
+                            <this.leftSideComponents/>
                         </Cell>
+                        {/* Right side */}
                         <Cell className="resume-right-col" col={8}>
                             <h2> UNDER CONSTRUCTION. DOWNLOAD MY RESUMES ON THE LEFT </h2>
                             <h2>Education</h2>
