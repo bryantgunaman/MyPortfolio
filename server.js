@@ -1,14 +1,14 @@
-const express = require('express');
-const app = express();
-const port = process.env.PORT || 5000;
+// const express = require('express');
+// const app = express();
+// const port = process.env.PORT || 5000;
 
 
-app.use('/static', express.static(path_join(__dirname, '/build')));
+// app.use('/static', express.static(path_join(__dirname, '/build')));
 
-// console.log that your server is up and running
-app.listen(port, () => console.log(`Listening on port ${port}`));
+// // console.log that your server is up and running
+// app.listen(port, () => console.log(`Listening on port ${port}`));
 
-// create a GET route
-app.get('/express_backend', (req, res) => {
-  res.send({ express: 'YOUR EXPRESS BACKEND IS CONNECTED TO REACT' });
-});
+// // create a GET route
+// app.get('/express_backend', (req, res) => {
+//   res.send({ express: 'YOUR EXPRESS BACKEND IS CONNECTED TO REACT' });
+// });
