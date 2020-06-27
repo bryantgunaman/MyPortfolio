@@ -9,7 +9,8 @@ class App extends Component {
   // state = {
   //   data: null
   // };
-
+  // add the following line to package.json
+  // "proxy": "http://localhost:5000/"
   // componentDidMount() {
   //     // Call our fetch function below once the component mounts
   //   this.callBackendAPI()
