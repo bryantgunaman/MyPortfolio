@@ -8,7 +8,7 @@ import Skills from './skills';
 class Resume extends Component {
 
     componentWillMount() {
-        document.title = "TEST";
+        document.title = "Resume"
     }
 
     // URL to my profile picture
@@ -141,61 +141,59 @@ class Resume extends Component {
     render () {
         return (
             <div>
-                <div>
-                    <Grid>
-                        {/* Left side */}
-                        <Cell col={4}>
-                            <this.leftSideComponents/>
-                        </Cell>
-                        {/* Right side */}
-                        <Cell className="resume-right-col" col={8}>
-                            <h2> UNDER CONSTRUCTION. DOWNLOAD MY RESUMES ON THE LEFT </h2>
-                            <h2>Education</h2>
-                            <Education
-                                startYear={2016}
-                                endYear={2020}
-                                schoolName={"Computer Science"}
-                                schoolDescription={"University of California, Irvine"}
-                            />
-                            <Education
-                                startYear={2016}
-                                endYear={2020}
-                                schoolName={"Business Information Management"}
-                                schoolDescription={"University of California, Irvine"}
-                            />
-                            <hr style={{borderTop: '3px solid #e22947'}}/>
+                <Grid>
+                    {/* Left side */}
+                    <Cell col={4}>
+                        <this.leftSideComponents/>
+                    </Cell>
+                    {/* Right side */}
+                    <Cell className="resume-right-col" col={8}>
+                        <h2> UNDER CONSTRUCTION. DOWNLOAD MY RESUMES ON THE LEFT </h2>
+                        <h2>Education</h2>
+                        <Education
+                            startYear={2016}
+                            endYear={2020}
+                            schoolName={"Computer Science"}
+                            schoolDescription={"University of California, Irvine"}
+                        />
+                        <Education
+                            startYear={2016}
+                            endYear={2020}
+                            schoolName={"Business Information Management"}
+                            schoolDescription={"University of California, Irvine"}
+                        />
+                        <hr style={{borderTop: '3px solid #e22947'}}/>
 
-                            <h2>Experience</h2>
-                            <Experience 
-                                startYear={2018}
-                                endYear={2019}
-                                jobName="First Job"
-                                jobDescription="adsfaef"
-                            />
-                            <Experience 
-                                startYear={2018}
-                                endYear={2019}
-                                jobName="Second Job"
-                                jobDescription="adsfaef"
-                            />
+                        <h2>Experience</h2>
+                        <Experience 
+                            startYear={2018}
+                            endYear={2019}
+                            jobName="First Job"
+                            jobDescription="adsfaef"
+                        />
+                        <Experience 
+                            startYear={2018}
+                            endYear={2019}
+                            jobName="Second Job"
+                            jobDescription="adsfaef"
+                        />
 
-                            <hr style={{borderTop: '3px solid #e22947'}}/>
-                            <h2>Skills</h2>
-                            <Skills 
-                                skill='python'
-                                progress={100}
-                            />
-                            <Skills 
-                                skill='python'
-                                progress={100}
-                            />
-                            <Skills 
-                                skill='python'
-                                progress={100}
-                            />
-                        </Cell>
-                    </Grid>
-                </div>
+                        <hr style={{borderTop: '3px solid #e22947'}}/>
+                        <h2>Skills</h2>
+                        <Skills 
+                            skill='python'
+                            progress={100}
+                        />
+                        <Skills 
+                            skill='python'
+                            progress={100}
+                        />
+                        <Skills 
+                            skill='python'
+                            progress={100}
+                        />
+                    </Cell>
+                </Grid>
             </div>
         )
     }

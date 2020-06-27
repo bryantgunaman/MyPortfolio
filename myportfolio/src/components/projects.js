@@ -18,7 +18,7 @@ class Projects extends Component {
             return (
                 <div className="projects-grid">
                     {/* Project 1 */}
-                    <h1>UNDER CONSTRUCTION</h1>
+                    <h1>UNDER CONSTRUCTION!! PLEASE COME BACK SOON</h1>
                     <Card shadow={5} style={{minWidth: '450', margin: 'auto'}}>
                         <CardTitle style={{color: '#fff', height: '176px', background: 'url(https://cdn.iconscout.com/icon/free/png-512/react-1-282599.png) center / cover'}}>React Project #1</CardTitle>
                         <CardText>
