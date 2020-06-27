@@ -3,6 +3,10 @@
   "name": "myportfolio",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "9.5.0",
+    "npm": "5.7.1"
+  },
   "dependencies": {
     "@material-ui/core": "^4.10.2",
     "@phuocng/react-pdf-viewer": "^1.7.0",
