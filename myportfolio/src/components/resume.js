@@ -8,7 +8,7 @@ import Skills from './skills';
 class Resume extends Component {
 
     componentWillMount() {
-        document.title = "Resume"
+        document.title = "TEST";
     }
 
     // URL to my profile picture
