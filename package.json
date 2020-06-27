@@ -5,7 +5,7 @@
   "private": true,
   "engines": {
     "node": "10.16.3",
-    "npm": "5.7.1"
+    "npm": "6.9.0"
   },
   "dependencies": {
     "@material-ui/core": "^4.10.2",
