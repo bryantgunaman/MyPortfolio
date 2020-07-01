@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import { Grid, Cell,} from 'react-mdl';
+import { Grid, Cell} from 'react-mdl';
+import { Link } from 'react-router-dom';
 import Button from '@material-ui/core/Button';
-import Education from './education';
-import Experience from './experience';
-import Skills from './skills';
+import Education from '../components/education';
+import Experience from '../components/experience';
+import Skills from '../components/skills';
 
 class Resume extends Component {
 
@@ -11,14 +12,11 @@ class Resume extends Component {
         document.title = "Resume"
     }
 
-    // URL to my profile picture
-    profilePicURL = "https://media-exp1.licdn.com/dms/image/C5603AQEP7T5fgnMPwg/profile-displayphoto-shrink_400_400/0?e=1598486400&v=beta&t=Wgu_86kpZWr5cL4c7bNbkPabYOh5JoEhzrSW9UDS82o"
-
     // Profile Picture component
     profilePicture = () => {
         return (
         <img
-        src = {this.profilePicURL}
+        src = {"https://media-exp1.licdn.com/dms/image/C5603AQEP7T5fgnMPwg/profile-displayphoto-shrink_400_400/0?e=1598486400&v=beta&t=Wgu_86kpZWr5cL4c7bNbkPabYOh5JoEhzrSW9UDS82o"}
         alt="avatar"
         style={{height: '200px', borderRadius: '50%', marginLeft: '50px', marginBottom: '2em'}}
         /> )
@@ -26,7 +24,9 @@ class Resume extends Component {
 
     // Handles opening a URL in a new tab
     handleOpenUrlNewTab = (url) => {
-        var win = window.open(url, '_blank');
+        // open at current tab for now because github.io doesn't support opening on new tab
+        // var win = window.open(url, '_blank'); 
+        var win = window.open(url, "_self");
         win.focus();
     }
 
@@ -138,13 +138,39 @@ class Resume extends Component {
         )
     }
 
-    render () {
+    render() {
         return (
             <div>
                 <Grid>
                     {/* Left side */}
                     <Cell col={4}>
-                        <this.leftSideComponents/>
+                        <this.profilePicture/>
+                        <div>
+                        <Button 
+                        variant="contained" color="primary" 
+                        style={{height:'75px', width:'150px', marginRight:'5px'}}>
+                        <Link 
+                            style={{textDecoration: 'none', color: 'white'}} 
+                            to="/cs-resume">Computer Science Resume   
+                        </Link>
+                        </Button><Button 
+                        variant="contained" color="secondary" 
+                        style={{height:'75px', width:'150px'}}>
+                        <Link 
+                            style={{textDecoration: 'none', color: 'white'}} 
+                            to="/business-resume">Business Resume 
+                        </Link>
+                        </Button>
+                        </div>
+                        <this.nameLabel/> 
+                        <this.purpleLine/>
+                        <this.personalDescription/>
+                        <this.purpleLine/>
+                        <this.phoneLabel/>
+                        <this.emailLabel/>
+                        <this.githubLabel/>
+                        <this.linkedInLabel/>
+                        <this.purpleLine/>
                     </Cell>
                     {/* Right side */}
                     <Cell className="resume-right-col" col={8}>
